@@ -1,0 +1,63 @@
+{
+  "Input": {
+    "FilePath": "users.csv",
+    "HasHeader": true,      
+    "Delimeter": ","        
+  },
+  "Filter": {
+    "FilterCsv": "filter.csv",      
+    "HasHeader": true,      
+    "Columns": [
+      "Name",
+      "Email"
+    ],
+    "JoinBy": 1,
+    "Delimeter": null       
+  },
+  "MatchFilter": {   
+    "InputColumns": [
+      "Name",        
+      "Age"
+    ],
+    "Mode": 0,
+    "CaseSensitive": true,
+    "Normalize": {
+      "WhiteSpace": true,
+      "RepeatedSpaces": true,
+      "Code": 1,
+      "Diatrics": true,
+      "CaseSensitive": true
+    },
+    "StopList": [
+      "and",
+      "is"
+    ],
+    "Tokenize": {
+      "TokenizationMode": 0,
+      "MinTokenLength": 2
+    },
+    "Encoding": {
+      "Detect": true,
+      "ExcludeCharClasses": [
+        "@"
+      ]
+    }
+  },
+  "OutPut": {
+    "Dir": "users.csv",
+    "WhiteMarked": "",
+    "WriteKept": "",
+    "WriteRemoved": ""
+  },
+  "ActionPolicy": {
+    "Policy": "",
+    "MarkColumn": true,
+    "Tiers": [
+      {
+        "MinThreshold": 3,
+        "Action": 1
+      }
+    ]
+  },
+  "Audit": true
+}

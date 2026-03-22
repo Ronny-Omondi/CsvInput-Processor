@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CsvProcessor.Api/CsvProcessor.Api.csproj" />
+  <Project Path="CsvProcessor.Console/CsvProcessor.Console.csproj" />
+  <Project Path="CsvProcessor.Core/CsvProcessor.Core.csproj" />
+  <Project Path="CsvProcessor.Tests/CsvProcessor.Tests.csproj" />
+</Solution>
