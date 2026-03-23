@@ -62,6 +62,15 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Quickenshtein/1.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Quickenshtein.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Quickenshtein.dll": {}
+        }
       }
     }
   },
@@ -147,12 +156,28 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Quickenshtein/1.5.1": {
+      "sha512": "orca+eUrt8FSF/mrgxFA2XNyXdp+2N/7+lwxD/cJEub6D/4VfpBMUkZrvP3WubKz3ToyDO0HV3sYbQql3xL7Nw==",
+      "type": "package",
+      "path": "quickenshtein/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/netcoreapp3.0/Quickenshtein.dll",
+        "lib/netstandard2.0/Quickenshtein.dll",
+        "quickenshtein.1.5.1.nupkg.sha512",
+        "quickenshtein.nuspec",
+        "readme.md"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "CsvHelper >= 33.1.0",
-      "Microsoft.AspNetCore.Http.Abstractions >= 2.3.9"
+      "Microsoft.AspNetCore.Http.Abstractions >= 2.3.9",
+      "Quickenshtein >= 1.5.1"
     ]
   },
   "packageFolders": {
@@ -205,6 +230,10 @@
           "Microsoft.AspNetCore.Http.Abstractions": {
             "target": "Package",
             "version": "[2.3.9, )"
+          },
+          "Quickenshtein": {
+            "target": "Package",
+            "version": "[1.5.1, )"
           }
         },
         "imports": [

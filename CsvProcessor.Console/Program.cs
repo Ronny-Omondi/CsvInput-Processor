@@ -3,6 +3,7 @@ using CsvProcessor.Core.Enum;
 using CsvProcessor.Core.Implementation;
 using CsvProcessor.Core.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using Quickenshtein;
 
 public class Program
 {
@@ -29,7 +30,8 @@ public class Program
             new List<string> { "A", "K" },
         ];
 
-        var set = await filter.FilterSetBuilder(sets, JoinAction.Union);
+        // var set = await filter.FilterSetBuilder(sets, JoinAction.Union);
+        var buildFilter = await filter.BuildFilterAsync(configRes.Filter);
 
         var file = serviceProvider.GetRequiredService<IFilePath>();
 
@@ -51,6 +53,16 @@ public class Program
                 System.Console.WriteLine(string.Join(" | ", row));
             }
         }
+
+        int distance = Levenshtein.GetDistance("Ronnie", "Ronny");
+
+        System.Console.WriteLine(Similarity(distance, "Ronnie", "Ronny"));
+    }
+
+    public static double Similarity(int distance, string input, string target)
+    {
+        var result = 1 - (double)distance / Math.Max(input.Length, target.Length);
+        return result;
     }
 }
 

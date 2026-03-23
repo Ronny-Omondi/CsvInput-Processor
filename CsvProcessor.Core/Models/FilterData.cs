@@ -6,7 +6,7 @@ namespace CsvProcessor.Core.Models;
 
 public class FilterData
 {
-    public string FilterCsv { get; set; }
+    public List<string> FilterCsv { get; set; }
     public bool HasHeader { get; set; }
     public List<string> Columns { get; set; }
     public JoinAction JoinBy { get; set; }

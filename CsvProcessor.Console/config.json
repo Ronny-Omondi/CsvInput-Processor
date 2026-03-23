@@ -10,14 +10,18 @@
     "Delimeter": ":"
   },
   "Filter": {
-    "FilterCsv": "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\filter.csv",
+    "FilterCsv":[
+      "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\users.csv",
+      "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\users.csv",
+      "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\filter.csv"
+    ],
     "HasHeader": true,
     "Columns": [
       "Name",
       "Email"
     ],
     "JoinBy": 1,
-    "Delimeter": null
+    "Delimeter": ","
   },
   "MatchFilter": {
     "InputColumns": [

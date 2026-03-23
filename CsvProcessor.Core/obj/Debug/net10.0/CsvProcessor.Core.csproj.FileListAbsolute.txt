@@ -10,3 +10,4 @@ C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\CsvProce
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\refint\CsvProcessor.Core.dll
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.pdb
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\ref\CsvProcessor.Core.dll
+C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.sourcelink.json

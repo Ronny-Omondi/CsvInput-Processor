@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AoXjymN1QsI=",
+  "dgSpecHash": "gzd8WArvKuM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Tests\\CsvProcessor.Tests.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.14.1\\microsoft.testplatform.objectmodel.17.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.testplatform.testhost\\17.14.1\\microsoft.testplatform.testhost.17.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\quickenshtein\\1.5.1\\quickenshtein.1.5.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xunit\\2.9.3\\xunit.2.9.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xunit.analyzers\\1.18.0\\xunit.analyzers.1.18.0.nupkg.sha512",

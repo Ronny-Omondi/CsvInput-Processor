@@ -50,11 +50,21 @@
           }
         }
       },
+      "Quickenshtein/1.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Quickenshtein.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Quickenshtein.dll": {}
+        }
+      },
       "CsvProcessor.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "CsvHelper": "33.1.0"
+          "CsvHelper": "33.1.0",
+          "Quickenshtein": "1.5.1"
         },
         "compile": {
           "bin/placeholder/CsvProcessor.Core.dll": {}
@@ -126,6 +136,21 @@
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
+      ]
+    },
+    "Quickenshtein/1.5.1": {
+      "sha512": "orca+eUrt8FSF/mrgxFA2XNyXdp+2N/7+lwxD/cJEub6D/4VfpBMUkZrvP3WubKz3ToyDO0HV3sYbQql3xL7Nw==",
+      "type": "package",
+      "path": "quickenshtein/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/netcoreapp3.0/Quickenshtein.dll",
+        "lib/netstandard2.0/Quickenshtein.dll",
+        "quickenshtein.1.5.1.nupkg.sha512",
+        "quickenshtein.nuspec",
+        "readme.md"
       ]
     },
     "CsvProcessor.Core/1.0.0": {

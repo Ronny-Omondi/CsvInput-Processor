@@ -537,6 +537,10 @@
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
               "version": "[2.3.9, )"
+            },
+            "Quickenshtein": {
+              "target": "Package",
+              "version": "[1.5.1, )"
             }
           },
           "imports": [
