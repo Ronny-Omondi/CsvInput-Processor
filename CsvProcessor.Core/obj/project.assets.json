@@ -181,24 +181,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\RONNY OMONDI\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Core\\CsvProcessor.Core.csproj",
+      "projectUniqueName": "C:\\Users\\RONNY OMONDI\\OneDrive\\Desktop\\CsvInput-Processor\\CsvProcessor.Core\\CsvProcessor.Core.csproj",
       "projectName": "CsvProcessor.Core",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Core\\CsvProcessor.Core.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Core\\obj\\",
+      "projectPath": "C:\\Users\\RONNY OMONDI\\OneDrive\\Desktop\\CsvInput-Processor\\CsvProcessor.Core\\CsvProcessor.Core.csproj",
+      "packagesPath": "C:\\Users\\RONNY OMONDI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RONNY OMONDI\\OneDrive\\Desktop\\CsvInput-Processor\\CsvProcessor.Core\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\RONNY OMONDI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -28,7 +28,7 @@
       "Name",
       "Age"
     ],
-    "Mode": 0,
+    "Mode": 1,
     "CaseSensitive": true,
     "Normalize": {
       "WhiteSpace": true,

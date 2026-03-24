@@ -33,36 +33,7 @@ public class Filter : IFilter
 
     private async Task<HashSet<string>> ExtractValues(FilterData filterData)
     {
-        var values = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        string[]? header = null;
-        int[]? indexes = null;
-        var input = new InputData { FilePaths = filterData.FilterCsv };
-        var files = _filePath.NormalizeFilePath(input);
-
-        await foreach (
-            var row in _csvReader.ReadFileAsync(
-                File.OpenRead(files[1]),
-                filterData.HasHeader,
-                filterData.Delimeter
-            )
-        )
-        {
-            if (header == null && filterData.HasHeader)
-            {
-                header = row;
-                indexes = filterData
-                    .Columns.Select(c => Array.IndexOf(header, c))
-                    .Where(i => i >= 0)
-                    .ToArray();
-                continue;
-            }
-            foreach (var i in indexes ?? Array.Empty<int>())
-            {
-                if (i < row.Length && !string.IsNullOrWhiteSpace(row[i]))
-                    values.Add(row[i].Trim());
-            }
-        }
-        return values;
+        throw new NotImplementedException();
     }
 
     private HashSet<string> FilterSetBuilder(IEnumerable<IEnumerable<string>> sets, JoinAction mode)

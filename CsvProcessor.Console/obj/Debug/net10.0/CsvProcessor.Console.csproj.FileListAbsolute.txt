@@ -24,3 +24,29 @@ C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Console\bin\Debug\net10.0\Micro
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Console\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.sourcelink.json
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Console\bin\Debug\net10.0\Quickenshtein.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvProcessor.Console.exe
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvProcessor.Console.deps.json
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvProcessor.Console.runtimeconfig.json
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvProcessor.Console.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvProcessor.Console.pdb
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvHelper.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\Quickenshtein.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvProcessor.Core.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\bin\Debug\net10.0\CsvProcessor.Core.pdb
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.csproj.AssemblyReference.cache
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.AssemblyInfoInputs.cache
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.AssemblyInfo.cs
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.csproj.CoreCompileInputs.cache
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.sourcelink.json
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProce.6108EFD4.Up2Date
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\refint\CsvProcessor.Console.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.pdb
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\CsvProcessor.Console.genruntimeconfig.cache
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\obj\Debug\net10.0\ref\CsvProcessor.Console.dll

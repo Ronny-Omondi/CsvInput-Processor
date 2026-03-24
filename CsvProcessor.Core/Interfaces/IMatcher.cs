@@ -5,5 +5,5 @@ namespace CsvProcessor.Core.Interfaces;
 
 public interface IMatcher
 {
-    Task<bool> IsMatch(string input, HashSet<string> filters, Match match);
+    Task<bool> IsMatch(string input, HashSet<string> filters, Matchs match);
 }

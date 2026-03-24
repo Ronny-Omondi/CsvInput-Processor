@@ -22,12 +22,7 @@ public class FilePath : IFilePath
             throw new DirectoryNotFoundException("Directory does not exist");
         }
 
-        var files = Directory.GetFiles(searchDir, pattern).ToList();
-
-        if (!files.Any())
-        {
-            throw new FileNotFoundException("File(s) with specified criteria does not exist");
-        }
+        var files = Directory.GetFiles(searchDir, pattern, SearchOption.TopDirectoryOnly).Where(f => string.Equals(Path.GetExtension(f), ".csv", StringComparison.OrdinalIgnoreCase)).ToList();
 
         return files;
     }
@@ -43,13 +38,17 @@ public class FilePath : IFilePath
         {
             if (!File.Exists(file))
             {
-                throw new FileNotFoundException("File not found", nameof(file));
+                throw new FileNotFoundException("Csv file not found", nameof(file));
+            }
+            if (!string.Equals(Path.GetExtension(file), ".csv", StringComparison.OrdinalIgnoreCase))
+            {
+                throw new ArgumentException("File extension must .csv");
             }
         }
         return filePaths;
     }
 
-    public List<string> GetAllMultipartCsvPath(List<IFormFile> uploadedFiles, string pattern)
+    public List<string> GetAllMultipartCsvPath(List<IFormFile> uploadedFiles)
     {
         var files = new List<string>();
 
@@ -57,19 +56,18 @@ public class FilePath : IFilePath
         {
             throw new ArgumentNullException("Files cannot be null");
         }
-        if (string.IsNullOrWhiteSpace(pattern))
-        {
-            throw new ArgumentNullException("Pattern cannot be null or empty");
-        }
-
+    
         foreach (var file in uploadedFiles)
         {
-            if (Path.GetExtension(file.FileName) == pattern)
-                files.Add(Path.GetFullPath(file.FileName));
-        }
-        if (!files.Any())
-        {
-            throw new FileNotFoundException("File(s) with specified criteria does not exist");
+            if (!string.Equals(Path.GetExtension(file.FileName), ".csv", StringComparison.OrdinalIgnoreCase))
+                throw new ArgumentException("File extension must be .csv");
+            var temp = Path.Combine(Path.GetTempPath(), file.FileName);
+
+            using (var stream = new FileStream(temp, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+            files.Add(temp);
         }
 
         return files;
@@ -80,10 +78,14 @@ public class FilePath : IFilePath
         if (file == null)
             throw new ArgumentNullException("File cannot be null", nameof(file));
 
-        if (!File.Exists(file.FileName))
-            throw new FileNotFoundException("File not found", file.FileName);
-
-        return Path.GetFullPath(file.FileName);
+        if (!string.Equals(Path.GetExtension(file.FileName), ".csv", StringComparison.OrdinalIgnoreCase))
+            throw new ArgumentException("File extension must be .csv");
+        var temp = Path.Combine(Path.GetTempPath(), file.FileName);
+        using (var stream = new FileStream(temp, FileMode.Create))
+        {
+            file.CopyTo(stream);
+        }
+        return temp;
     }
 
     public string GetCsvPath(string filePath)
@@ -92,7 +94,9 @@ public class FilePath : IFilePath
             throw new ArgumentNullException("File path not found", nameof(filePath));
 
         if (!File.Exists(filePath))
-            throw new FileNotFoundException("File not found", nameof(filePath));
+            throw new FileNotFoundException("Csv file not found", nameof(filePath));
+        if (!string.Equals(Path.GetExtension(filePath), ".csv", StringComparison.OrdinalIgnoreCase))
+            throw new ArgumentException("File extension must be .csv");
 
         return filePath;
     }
@@ -103,7 +107,7 @@ public class FilePath : IFilePath
             throw new ArgumentNullException("Input data cannot be null");
 
         if (inputData.Files != null && inputData.Files.Any())
-            return GetAllMultipartCsvPath(inputData.Files, "*.csv");
+            return GetAllMultipartCsvPath(inputData.Files);
 
         if (inputData.File != null)
             return new List<string> { GetMultipartPath(inputData.File) };
@@ -111,7 +115,7 @@ public class FilePath : IFilePath
         if (inputData.FilePath != null)
             return new List<string> { GetCsvPath(inputData.FilePath) };
 
-        if (inputData.FilePaths != null && inputData.FilePaths.Count > 1)
+        if (inputData.FilePaths != null && inputData.FilePaths.Count >= 1)
             return GetMultipleCsvPath(inputData.FilePaths);
 
         if (

@@ -11,3 +11,16 @@ C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\refint\C
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.pdb
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\ref\CsvProcessor.Core.dll
 C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.sourcelink.json
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.csproj.AssemblyReference.cache
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.AssemblyInfoInputs.cache
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.AssemblyInfo.cs
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.csproj.CoreCompileInputs.cache
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.sourcelink.json
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\refint\CsvProcessor.Core.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\CsvProcessor.Core.pdb
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\bin\Debug\net10.0\CsvProcessor.Core.deps.json
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\bin\Debug\net10.0\CsvProcessor.Core.dll
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\bin\Debug\net10.0\CsvProcessor.Core.pdb
+C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Core\obj\Debug\net10.0\ref\CsvProcessor.Core.dll

@@ -14,55 +14,24 @@ public class Program
         service.AddSingleton<ICsvReader, CsvFileReader>();
         service.AddSingleton<IFilter, Filter>();
         service.AddSingleton<IFilePath, FilePath>();
+        service.AddSingleton<IMatcher, Matcher>();
 
         var serviceProvider = service.BuildServiceProvider();
         var config = serviceProvider.GetRequiredService<IConfigurationLoader>();
         var configRes = await config.LoadStinConfigurationsAsync(
-            @"C:\Users\Admin\Desktop\CsvProcessor\CsvProcessor.Console\config.json"
+            @"C:\Users\RONNY OMONDI\OneDrive\Desktop\CsvInput-Processor\CsvProcessor.Console\config.json"
         );
 
-        //filter
-        var filter = serviceProvider.GetRequiredService<IFilter>();
-        List<List<string>> sets =
-        [
-            new List<string> { "A", "B", "C" },
-            new List<string> { "D", "B" },
-            new List<string> { "A", "K" },
-        ];
+        var match = serviceProvider.GetRequiredService<IMatcher>();
 
-        // var set = await filter.FilterSetBuilder(sets, JoinAction.Union);
-        var buildFilter = await filter.BuildFilterAsync(configRes.Filter);
-
-        var file = serviceProvider.GetRequiredService<IFilePath>();
-
-        var filePath = file.NormalizeFilePath(configRes.Input);
-
-        var reader = serviceProvider.GetRequiredService<ICsvReader>();
-
-        foreach (var f in filePath)
+        HashSet<string> filters = new HashSet<string>
         {
-            using var stream = File.OpenRead(f);
-            await foreach (
-                var row in reader.ReadFileAsync(
-                    stream,
-                    configRes.Input.HasHeader,
-                    configRes.Input.Delimeter
-                )
-            )
-            {
-                System.Console.WriteLine(string.Join(" | ", row));
-            }
-        }
+            "Ronny","Alice","Mark"
+        };
 
-        int distance = Levenshtein.GetDistance("Ronnie", "Ronny");
+        Console.WriteLine(await match.IsMatch("Ronny",filters,configRes.MatchFilter));
 
-        System.Console.WriteLine(Similarity(distance, "Ronnie", "Ronny"));
-    }
 
-    public static double Similarity(int distance, string input, string target)
-    {
-        var result = 1 - (double)distance / Math.Max(input.Length, target.Length);
-        return result;
     }
 }
 

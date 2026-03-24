@@ -3,7 +3,7 @@ using CsvProcessor.Core.Enum;
 
 namespace CsvProcessor.Core.Models;
 
-public class Match
+public class Matchs
 {
     public List<string> InputColumns { get; set; }
     public Mode Mode { get; set; }
