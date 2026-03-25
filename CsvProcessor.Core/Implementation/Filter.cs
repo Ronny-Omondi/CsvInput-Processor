@@ -1,4 +1,7 @@
 using System;
+using System.Globalization;
+using CsvHelper;
+using CsvHelper.Configuration;
 using CsvProcessor.Core.Enum;
 using CsvProcessor.Core.Interfaces;
 using CsvProcessor.Core.Models;
@@ -20,32 +23,55 @@ public class Filter : IFilter
     {
         if (filterData == null)
             throw new ArgumentNullException("Filter data must be provided");
-        var sets = new List<HashSet<string>>();
 
-        foreach (var file in filterData.FilterCsv) //filter csv list
+        return FilterSetBuilder(await ExtractValues(filterData), filterData.JoinBy);
+    }
+
+    public async Task<IEnumerable<IEnumerable<string>>> ExtractValues(FilterData filterData)
+    {
+        if (filterData == null) throw new ArgumentNullException("Filter data cannot be null");
+        var config = new CsvConfiguration(CultureInfo.InvariantCulture)
         {
-            var set = await ExtractValues(filterData);
-            if (set.Count > 0)
-                sets.Add(set);
+            HasHeaderRecord = filterData.HasHeader,
+            Delimiter = filterData.Delimeter,
+        };
+
+        using var reader = new StreamReader(filterData.FilePath);
+        using var csvReader = new CsvReader(reader, config);
+        if (filterData.HasHeader)
+        {
+            await csvReader.ReadAsync();
+            csvReader.ReadHeader();
         }
-        return FilterSetBuilder(sets, filterData.JoinBy);
+
+        var columnList = new List<HashSet<string>>();
+        for (int i = 0; i < filterData.Columns.Count; i++)
+        {
+            columnList.Add(new HashSet<string>());
+        }
+        while (await csvReader.ReadAsync())
+        {
+            for (int i = 0; i < filterData.Columns.Count; i++)
+            {
+                var col = filterData.Columns[i];
+                var value = csvReader.GetField(col);
+                if (!string.IsNullOrEmpty(value))
+                    columnList[i].Add(value);
+            }
+        }
+        return columnList;
     }
 
-    private async Task<HashSet<string>> ExtractValues(FilterData filterData)
+    public HashSet<string> FilterSetBuilder(IEnumerable<IEnumerable<string>> sets, JoinAction mode)
     {
-        throw new NotImplementedException();
-    }
-
-    private HashSet<string> FilterSetBuilder(IEnumerable<IEnumerable<string>> sets, JoinAction mode)
-    {
-        HashSet<string> filtered = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        HashSet<string> filtered = null!;
         if (sets == null)
             throw new ArgumentNullException("Filter set cannot be null");
         foreach (var set in sets)
         {
             if (filtered == null)
             {
-                filtered = [.. set];
+                filtered = new HashSet<string>(set, StringComparer.OrdinalIgnoreCase);
             }
             else
             {
@@ -60,6 +86,6 @@ public class Filter : IFilter
             }
         }
 
-        return filtered;
+        return filtered ?? new HashSet<string>(StringComparer.OrdinalIgnoreCase);
     }
 }

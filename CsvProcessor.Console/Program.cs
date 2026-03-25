@@ -28,8 +28,10 @@ public class Program
         {
             "Ronny","Alice","Mark"
         };
+        var filter = serviceProvider.GetRequiredService<IFilter>();
 
-        Console.WriteLine(await match.IsMatch("Ronny",filters,configRes.MatchFilter));
+        var build =await filter.BuildFilterAsync(configRes.Filter);
+        Console.WriteLine(await match.IsMatch("Ronny", filters, configRes.MatchFilter));
 
 
     }

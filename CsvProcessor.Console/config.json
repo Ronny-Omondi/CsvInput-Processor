@@ -1,7 +1,6 @@
 {
   "Input": {
-   
-    "FilePaths":[
+    "FilePaths": [
       "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\users.csv",
       "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\users.csv",
       "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\filter.csv"
@@ -10,11 +9,7 @@
     "Delimeter": ":"
   },
   "Filter": {
-    "FilterCsv":[
-      "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\users.csv",
-      "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\users.csv",
-      "C:\\Users\\Admin\\Desktop\\CsvProcessor\\CsvProcessor.Console\\filter.csv"
-    ],
+    "FilePath": "C:\\Users\\RONNY OMONDI\\OneDrive\\Desktop\\CsvInput-Processor\\CsvProcessor.Console\\users.csv",
     "HasHeader": true,
     "Columns": [
       "Name",

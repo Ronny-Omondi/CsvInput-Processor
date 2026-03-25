@@ -26,19 +26,19 @@ public class CsvFileReader : ICsvReader
             Delimiter = Delimeter,
         };
 
-        using var streamReader = new StreamReader(stream);
+        using var streamReader = new StreamReader(stream, leaveOpen: true);
 
         using var csvReader = new CsvReader(streamReader, config);
 
         if (HasHeader)
             await csvReader.ReadAsync();
+        // csvReader.ReadHeader();
 
         while (await csvReader.ReadAsync())
         {
             var row = csvReader.Parser.Record;
-            if (row == null)
-                continue;
-            yield return row;
+            if (row != null)
+                yield return row;
         }
     }
 }

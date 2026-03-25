@@ -15,6 +15,13 @@ public class Matcher : IMatcher
             return false;
         if (string.IsNullOrWhiteSpace(input))
             return false;
+        //normalize
+        //tokenize
+        //stop list filtering
+        //encoding
+        //matching
+        //column weights
+        //action policy
         return match.Mode switch
         {
             Enum.Mode.Exact => ExactMatch(input, filters),
